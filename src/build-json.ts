@@ -1,4 +1,5 @@
-import TagInfoBuilder from "./builderOut.js"
+//import TagInfoBuilder from "./builderOut.js"
+import TagInfoBuilder from "https://example.com"
 
 //
 // Do NOT remove content above
