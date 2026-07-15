@@ -17,14 +17,16 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
 
-      - name: Clean Install
-        run: npm ci
+      - name: Setup npm
+        run: |
+          npm init -y
+          npm install -D typescript tsx
       
       - name: Run Script
-        run: npx tsx src/buildJSON.ts
+        run: npx tsx src/build_json.ts
 
       - name: Publish JSON
         run: |
