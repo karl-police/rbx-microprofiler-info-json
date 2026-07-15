@@ -51,7 +51,7 @@ jobs:
           cd publish
           
           git add output.json
-          git commit -m "Generated JSON"
+          git commit -m "Generated JSON" || echo "No changes"
           git push origin output-json --force
 
 
