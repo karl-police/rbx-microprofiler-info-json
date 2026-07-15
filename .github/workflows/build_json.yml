@@ -44,6 +44,5 @@ jobs:
            mv /tmp/output.json output.json
           
           git add output.json
-
           git commit -m "Generated JSON"
           git push origin output-json --force
