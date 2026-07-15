@@ -39,8 +39,8 @@ jobs:
 
           # Switch branches
           git fetch origin
-          git checkout -B output-json origin/output-json
-
+          git checkout output-json
+          
           cp /tmp/output.json output.json
 
           git add output.json
