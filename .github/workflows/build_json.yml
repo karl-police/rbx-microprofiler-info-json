@@ -39,7 +39,7 @@ jobs:
 
           # Switch branches
           git fetch origin
-          git checkout output-json
+          git checkout -B output-json
 
            mv /tmp/output.json output.json
           
