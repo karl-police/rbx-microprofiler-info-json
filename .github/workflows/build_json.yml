@@ -35,11 +35,13 @@ jobs:
           git config user.email "github-actions-bot <support+actions@github.com>"
 
           # Save generated file
-          #cp output.json /tmp/output.json
+          mv output.json /tmp/output.json
 
           # Switch branches
           git fetch origin
           git checkout output-json
+
+           mv /tmp/output.json output.json
           
           git add output.json
 
