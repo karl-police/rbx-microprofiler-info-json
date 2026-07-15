@@ -1,0 +1,46 @@
+name: Build JSON
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Clean Install
+        run: npm ci
+      
+      - name: Run Script
+        run: npx tsx src/buildJSON.ts
+
+      - name: Publish JSON
+        run: |
+          git config user.name "github-actions-bot"
+          git config user.email "github-actions-bot <support+actions@github.com>"
+
+          # Save generated file
+          cp output.json /tmp/output.json
+
+          # Switch branches
+          git fetch origin
+          git checkout -B output-json origin/output-json
+
+          cp /tmp/output.json output.json
+
+          git add output.json
+
+          git commit -m "Generated JSON"
+          git push origin output-json --force
