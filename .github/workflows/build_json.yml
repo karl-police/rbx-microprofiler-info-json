@@ -34,27 +34,18 @@ jobs:
           git config user.name "github-actions-bot"
           git config user.email "github-actions-bot <support+actions@github.com>"
 
-
           # Save generated file
-          cp output.json /tmp/output.json
+          #mv output.json /tmp/output.json
 
-          # Branches
-          git fetch origin output-json
+          # Switch branches
+          git fetch origin
+          git checkout --orphan output-json
 
-          # Create worktree folder named "publish"
-          git worktree add publish output-json
+          # Remove other branch inherited files
+          git rm -rf . || true
 
-          # Copy file into worktree folder.
-          cp output.json publish/output.json
-
-          # Enter worktree
-          cd publish
+          #mv /tmp/output.json output.json
           
           git add output.json
-          git commit -m "Generated JSON" || echo "No changes"
+          git commit -m "Generated JSON"
           git push origin output-json --force
-
-
-          # Done
-          cd ..
-          git worktree remove publish
