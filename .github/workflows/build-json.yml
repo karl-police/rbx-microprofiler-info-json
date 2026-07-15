@@ -27,7 +27,7 @@ jobs:
           npm install -D typescript tsx
       
       - name: Run Script
-        run: npx tsx src/build_json.ts
+        run: npx tsx src/build-json.ts
 
       - name: Publish JSON
         run: |
