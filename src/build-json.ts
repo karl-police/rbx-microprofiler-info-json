@@ -1,5 +1,5 @@
-//import TagInfoBuilder from "./builderOut.js"
-import TagInfoBuilder from "https://example.com"
+import TagInfoBuilder from "./builderOut.js"
+//import TagInfoBuilder from "https://example.com"
 console.log(TagInfoBuilder)
 
 //
