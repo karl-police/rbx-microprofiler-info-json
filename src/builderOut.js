@@ -69,7 +69,9 @@ var BaseDocsEntry = class {
     ((_a = this.Data).Tags ?? (_a.Tags = [])).push(input);
     return this;
   }
-  toJSON() {
+  toJSON(key) {
+    if (key !== void 0)
+      return this.Data;
     return JSON.stringify(this.Data);
   }
   /**
