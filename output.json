@@ -1,0 +1,52 @@
+{
+  "TagTokens": [
+    {
+      "NameUID": "test",
+      "DocsInfo": {
+        "Description": "This is test"
+      },
+      "Color": [
+        255,
+        0,
+        0
+      ]
+    },
+    {
+      "NameUID": "test2",
+      "DocsInfo": {
+        "Description": "This is test2"
+      },
+      "Color": [
+        0,
+        255,
+        0
+      ]
+    },
+    {
+      "NameUID": "test3",
+      "DocsInfo": {
+        "Description": "This is test3"
+      },
+      "Color": [
+        0,
+        0,
+        255
+      ]
+    }
+  ],
+  "TagGroups": [
+    {
+      "NameUID": "LuaBridge",
+      "DocsInfo": {
+        "Description": "\n            This is LuaBridge!\n            Very cool!\n        "
+      }
+    },
+    {
+      "NameUID": "Systems",
+      "DocsInfo": {
+        "Description": "\n            This is Systems\n            Hmmmm\n        "
+      }
+    }
+  ],
+  "TagLabelDefs": []
+}
