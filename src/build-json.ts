@@ -23,4 +23,4 @@ let dataJson = builder.toJSON()
 // Do NOT remove content below
 //
 
-fs.writeFileSync( "output.json", JSON.stringify(dataJson) );
+fs.writeFileSync( "output.json", JSON.stringify(dataJson, null, 2) );
