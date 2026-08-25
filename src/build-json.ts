@@ -1,5 +1,4 @@
-import { TagDataBuilder } from "./builderOut.js"
-import { TagDataClasses } from "./builderOut.js"
+import { TagDataBuilder, TagDataClasses } from "./builderOut.js"
 //import TagInfoBuilder from "https://example.com"
 import fs from "fs"
 
