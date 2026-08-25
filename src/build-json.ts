@@ -1,7 +1,5 @@
-import TagInfoBuilder from "./builderOut.js"
+import { TagDataBuilder } from "./builderOut.js"
 //import TagInfoBuilder from "https://example.com"
-console.log(TagInfoBuilder)
-
 import fs from "fs"
 
 //
@@ -9,12 +7,16 @@ import fs from "fs"
 //
 
 
+let builder = new TagDataBuilder()
 
+builder.AddTagToken(
+    new TagDataClasses.TagTokenEntry("test")
+        .SetDescription("test")
+        .WithColor([255,0,0])
+)
 
-
-let dataJson = ["test"]
-
-
+builder.Finalize()
+let dataJson = builder.toJSON()
 
 
 //
