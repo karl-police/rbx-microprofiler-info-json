@@ -3,7 +3,7 @@ name: Build JSON
 on:
   push:
     branches:
-      - main
+      - main-for-building
   workflow_dispatch:
 
 permissions:
