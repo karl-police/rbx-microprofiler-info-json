@@ -16,11 +16,11 @@ builder.AddTagToken(
 )
 
 builder.Finalize()
-let dataJson = builder.toJSON()
+let dataJsonStr = builder.toJSON()
 
 
 //
 // Do NOT remove content below
 //
 
-fs.writeFileSync( "output.json", JSON.stringify(dataJson, null, 2) );
+fs.writeFileSync( "output.json", JSON.stringify(JSON.parse(dataJsonStr), null, 2) );
